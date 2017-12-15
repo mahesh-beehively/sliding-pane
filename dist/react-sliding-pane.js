@@ -115,6 +115,7 @@ function ReactSlidingPane(_ref) {
         __WEBPACK_IMPORTED_MODULE_2_react_modal___default.a,
         {
             className: 'slide-pane ' + directionClass + ' ' + (className || ''),
+	    ariaHideApp:false,
             style: {
                 content: { width: width || '80%' }
             },
