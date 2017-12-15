@@ -21,7 +21,7 @@ export default function ReactSlidingPane({
     const directionClass = `slide-pane_from_${from}`;
 
     return <Modal
-        ariaHideApp={false}
+        ariaHideApp
         className={ `slide-pane ${directionClass} ${className || ''}` }
         style={{
             content: { width: width || '80%' }
