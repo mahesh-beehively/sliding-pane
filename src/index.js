@@ -6,6 +6,8 @@ import './index.styl';
 
 const CLOSE_TIMEOUT = 500;
 
+Modal.setAppElement('body');
+
 export default function ReactSlidingPane({
     isOpen,
     title,
@@ -21,7 +23,6 @@ export default function ReactSlidingPane({
     const directionClass = `slide-pane_from_${from}`;
 
     return <Modal
-        ariaHideApp
         className={ `slide-pane ${directionClass} ${className || ''}` }
         style={{
             content: { width: width || '80%' }
