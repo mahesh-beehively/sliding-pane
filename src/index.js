@@ -36,16 +36,16 @@ export default function ReactSlidingPane({
         contentLabel={ `Modal "${title || ''}"` }>
         <div className='slide-pane__header'>
             <div className='slide-pane__close' onClick={ onRequestClose }>
-                <svg viewPort="0 0 12 12" version="1.1"
+                <svg viewBox='0 0 13 22' version="1.1"
                      xmlns="http://www.w3.org/2000/svg">
                     <line x1="1" y1="11" 
                           x2="11" y2="1" 
                           stroke="black" 
-                          stroke-width="2"/>
+                          strokeWidth="2"/>
                     <line x1="1" y1="1" 
                           x2="11" y2="11" 
                           stroke="black" 
-                          stroke-width="2"/>
+                          strokeWidth="2"/>
                 </svg>
             </div>
             <div className='slide-pane__title-wrapper'>

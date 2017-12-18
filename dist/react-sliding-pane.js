@@ -135,16 +135,16 @@ function ReactSlidingPane(_ref) {
                 { className: 'slide-pane__close', onClick: onRequestClose },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'svg',
-                    { viewPort: '0 0 12 12', version: '1.1',
+                    { viewBox: '0 0 13 22', version: '1.1',
                         xmlns: 'http://www.w3.org/2000/svg' },
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('line', { x1: '1', y1: '11',
                         x2: '11', y2: '1',
                         stroke: 'black',
-                        'stroke-width': '2' }),
+                        strokeWidth: '2' }),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('line', { x1: '1', y1: '1',
                         x2: '11', y2: '11',
                         stroke: 'black',
-                        'stroke-width': '2' })
+                        strokeWidth: '2' })
                 )
             ),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
