@@ -35,7 +35,17 @@ export default function ReactSlidingPane({
         contentLabel={ `Modal "${title || ''}"` }>
         <div className='slide-pane__header'>
             <div className='slide-pane__close' onClick={ onRequestClose }>
-                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13 22'><path fill='currentColor' fillRule='evenodd' d='M4 11l8 8c.6.5.6 1.5 0 2-.5.6-1.5.6-2 0l-9-9c-.6-.5-.6-1.5 0-2l9-9c.5-.6 1.5-.6 2 0 .6.5.6 1.5 0 2l-8 8z'/></svg>
+                <svg viewPort="0 0 12 12" version="1.1"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <line x1="1" y1="11" 
+                          x2="11" y2="1" 
+                          stroke="black" 
+                          stroke-width="2"/>
+                    <line x1="1" y1="1" 
+                          x2="11" y2="11" 
+                          stroke="black" 
+                          stroke-width="2"/>
+                </svg>
             </div>
             <div className='slide-pane__title-wrapper'>
                 <h2 className='slide-pane__title'>{ title }</h2>
