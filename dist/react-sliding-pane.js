@@ -7,7 +7,7 @@
 		exports["ReactSlidingPane"] = factory(require("react"), require("prop-types"), require("react-modal"));
 	else
 		root["ReactSlidingPane"] = factory(root["React"], root[undefined], root["ReactModal"]);
-})(this, function(__WEBPACK_EXTERNAL_MODULE_1__, __WEBPACK_EXTERNAL_MODULE_2__, __WEBPACK_EXTERNAL_MODULE_3__) {
+})(typeof self !== 'undefined' ? self : this, function(__WEBPACK_EXTERNAL_MODULE_1__, __WEBPACK_EXTERNAL_MODULE_2__, __WEBPACK_EXTERNAL_MODULE_3__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -96,6 +96,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 var CLOSE_TIMEOUT = 500;
 
+__WEBPACK_IMPORTED_MODULE_2_react_modal___default.a.setAppElement('body');
+
 function ReactSlidingPane(_ref) {
     var isOpen = _ref.isOpen,
         title = _ref.title,
@@ -114,8 +116,8 @@ function ReactSlidingPane(_ref) {
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         __WEBPACK_IMPORTED_MODULE_2_react_modal___default.a,
         {
+            ariaHideApp: false,
             className: 'slide-pane ' + directionClass + ' ' + (className || ''),
-	    ariaHideApp:false,
             style: {
                 content: { width: width || '80%' }
             },
@@ -133,8 +135,16 @@ function ReactSlidingPane(_ref) {
                 { className: 'slide-pane__close', onClick: onRequestClose },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'svg',
-                    { xmlns: 'http://www.w3.org/2000/svg', viewBox: '0 0 13 22' },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('path', { fill: 'currentColor', fillRule: 'evenodd', d: 'M4 11l8 8c.6.5.6 1.5 0 2-.5.6-1.5.6-2 0l-9-9c-.6-.5-.6-1.5 0-2l9-9c.5-.6 1.5-.6 2 0 .6.5.6 1.5 0 2l-8 8z' })
+                    { viewPort: '0 0 12 12', version: '1.1',
+                        xmlns: 'http://www.w3.org/2000/svg' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('line', { x1: '1', y1: '11',
+                        x2: '11', y2: '1',
+                        stroke: 'black',
+                        'stroke-width': '2' }),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('line', { x1: '1', y1: '1',
+                        x2: '11', y2: '11',
+                        stroke: 'black',
+                        'stroke-width': '2' })
                 )
             ),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(

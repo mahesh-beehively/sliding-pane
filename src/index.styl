@@ -53,9 +53,7 @@ $pane-header-height = 64px
         display flex
         flex 0 0 $pane-header-height
         align-items center
-        background #ebebeb
         height $pane-header-height
-        border-bottom 1px solid rgba(0, 0, 0, .1)
 
     &__title-wrapper
         display flex
@@ -75,9 +73,10 @@ $pane-header-height = 64px
         padding 0
 
     &__close
-        margin-left 24px
         padding 16px
         opacity .7
+        position absolute
+        right 20px
         cursor pointer
 
         svg
