@@ -13,6 +13,7 @@ export default function ReactSlidingPane({
     title,
     subtitle,
     onRequestClose,
+    closeOnDocument=false,
     onAfterOpen,
     children,
     className,
@@ -32,7 +33,7 @@ export default function ReactSlidingPane({
         closeTimeoutMS={ CLOSE_TIMEOUT }
         isOpen={ isOpen }
         onAfterOpen={ onAfterOpen }
-        onRequestClose={ onRequestClose }
+        onRequestClose={ closeOnDocument ? onRequestClose : () => {}}
         contentLabel={ `Modal "${title || ''}"` }>
         <div className='slide-pane__header'>
             <div className='slide-pane__close' onClick={ onRequestClose }>
@@ -61,6 +62,7 @@ export default function ReactSlidingPane({
 
 ReactSlidingPane.propTypes = {
     isOpen: PropTypes.bool.isRequired,
+    closeOnDocument: PropTypes.bool,
     title: PropTypes.any,
     subtitle: PropTypes.any,
     onRequestClose: PropTypes.func,

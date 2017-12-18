@@ -103,6 +103,8 @@ function ReactSlidingPane(_ref) {
         title = _ref.title,
         subtitle = _ref.subtitle,
         onRequestClose = _ref.onRequestClose,
+        _ref$closeOnDocument = _ref.closeOnDocument,
+        closeOnDocument = _ref$closeOnDocument === undefined ? false : _ref$closeOnDocument,
         onAfterOpen = _ref.onAfterOpen,
         children = _ref.children,
         className = _ref.className,
@@ -125,7 +127,7 @@ function ReactSlidingPane(_ref) {
             closeTimeoutMS: CLOSE_TIMEOUT,
             isOpen: isOpen,
             onAfterOpen: onAfterOpen,
-            onRequestClose: onRequestClose,
+            onRequestClose: closeOnDocument ? onRequestClose : function () {},
             contentLabel: 'Modal "' + (title || '') + '"' },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'div',
@@ -172,6 +174,7 @@ function ReactSlidingPane(_ref) {
 
 ReactSlidingPane.propTypes = {
     isOpen: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.bool.isRequired,
+    closeOnDocument: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.bool,
     title: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.any,
     subtitle: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.any,
     onRequestClose: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.func,
